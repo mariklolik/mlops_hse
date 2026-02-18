@@ -70,18 +70,22 @@ def evaluate():
     fig.savefig(f'{artifacts_dir}/confusion_matrix.png')
     plt.close(fig)
 
+    feature_names = list(X_test.columns)
+
     if hasattr(model, 'feature_importances_'):
         importances = model.feature_importances_
-        fig, ax = plt.subplots()
-        ax.barh(range(len(importances)), importances)
+        fig, ax = plt.subplots(figsize=(8, max(4, len(importances) * 0.3)))
+        ax.barh(feature_names, importances)
         ax.set_xlabel('Importance')
+        fig.tight_layout()
         fig.savefig(f'{artifacts_dir}/feature_importances.png')
         plt.close(fig)
     elif hasattr(model, 'coef_'):
         coefs = np.abs(model.coef_[0])
-        fig, ax = plt.subplots()
-        ax.barh(range(len(coefs)), coefs)
+        fig, ax = plt.subplots(figsize=(8, max(4, len(coefs) * 0.3)))
+        ax.barh(feature_names, coefs)
         ax.set_xlabel('Coefficient (abs)')
+        fig.tight_layout()
         fig.savefig(f'{artifacts_dir}/feature_importances.png')
         plt.close(fig)
 

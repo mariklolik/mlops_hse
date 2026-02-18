@@ -28,13 +28,14 @@ def train():
     X_train, X_test, y_train, y_test = splits
     logger.info('Datasets loaded')
 
-    model_type = params.pop('model_type', 'logistic_regression')
+    model_type = params.get('model_type', 'logistic_regression')
     model_class = MODEL_CLASSES[model_type]
+    model_params = {k: v for k, v in params.items() if k != 'model_type'}
+    model_params['random_state'] = RANDOM_STATE
 
     logger.info(f'Creating model: {model_type}')
-    params['random_state'] = RANDOM_STATE
-    logger.info(f'    Model params: {params}')
-    model = model_class(**params)
+    logger.info(f'    Model params: {model_params}')
+    model = model_class(**model_params)
 
     logger.info('Training model')
     model.fit(X_train, y_train.values.ravel())

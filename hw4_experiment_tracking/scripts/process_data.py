@@ -31,10 +31,11 @@ def process_data():
         'workclass', 'education', 'marital.status', 'occupation', 'relationship',
         'race', 'sex', 'native.country',
     ]
-    cat_features = list(set(columns) & set(all_cat_features))
-    num_features = list(set(columns) - set(all_cat_features))
+    cat_features = [c for c in columns if c in all_cat_features]
+    num_features = [c for c in columns if c not in all_cat_features]
 
     preprocessor = OrdinalEncoder()
+    feature_names = num_features + cat_features
     X_transformed = np.hstack([X[num_features], preprocessor.fit_transform(X[cat_features])])
     y_transformed: pd.Series = (y == '>50K').astype(int)
     X_train, X_test, y_train, y_test = train_test_split(
@@ -55,9 +56,8 @@ def process_data():
         (X_train, X_test, y_train, y_test),
         ('X_train', 'X_test', 'y_train', 'y_test'),
     ):
-        pd.DataFrame(split).to_csv(
-            DATASET_PATH_PATTERN.format(split_name=split_name), index=False
-        )
+        df = pd.DataFrame(split, columns=feature_names if 'X' in split_name else None)
+        df.to_csv(DATASET_PATH_PATTERN.format(split_name=split_name), index=False)
     logger.info('Datasets saved')
 
 

@@ -1,4 +1,5 @@
 import mlflow
+from joblib import load as joblib_load
 
 from constants import MLFLOW_TRACKING_URI, EXPERIMENT_NAME
 from scripts import evaluate, process_data, train
@@ -34,10 +35,8 @@ def run():
         mlflow.log_artifact('/app/data/X_train.csv', 'datasets')
         mlflow.log_artifact('/app/data/y_train.csv', 'datasets')
 
-        mlflow.sklearn.log_model(
-            sk_model=__import__('joblib').load('/app/model.joblib'),
-            artifact_path='model',
-        )
+        model = joblib_load('/app/model.joblib')
+        mlflow.sklearn.log_model(sk_model=model, artifact_path='model')
 
 
 if __name__ == '__main__':
