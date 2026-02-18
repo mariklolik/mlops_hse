@@ -1,0 +1,12 @@
+services:
+  registry:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - registry_data:/app/storage
+      - db_data:/app
+
+volumes:
+  registry_data:
+  db_data:
