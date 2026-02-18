@@ -1,0 +1,6 @@
+data/
+.Trash-0
+.ipynb_checkpoints
+__pycache__
+model.joblib
+mlruns/
