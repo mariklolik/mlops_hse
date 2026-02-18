@@ -21,8 +21,6 @@ Dataset: Adult Census Income (scikit-learn/adult-census-income), binary classifi
 | logreg_l2_5k | 5000 | 0.817 | 0.510 | 0.827 |
 | logreg_l2_10k | 10000 | 0.815 | 0.530 | 0.817 |
 
-**Conclusion**: Results are mixed. Accuracy and ROC-AUC remain relatively stable across dataset sizes (~0.81-0.83). F1 score fluctuates without a clear upward trend, suggesting logistic regression has limited capacity for this task regardless of training data size.
-
 ---
 
 ## 2. Model Type Variation
@@ -38,8 +36,6 @@ Dataset: Adult Census Income (scikit-learn/adult-census-income), binary classifi
 | random_forest_5k | random_forest | 0.842 | 0.597 | 0.873 |
 | gradient_boosting_5k | gradient_boosting | 0.853 | 0.629 | 0.885 |
 
-**Conclusion**: Hypothesis confirmed. Gradient Boosting achieves the best ROC-AUC (0.885) and accuracy (0.853). Ensemble methods clearly outperform logistic regression. Decision tree is competitive on F1 but lags on ROC-AUC.
-
 ---
 
 ## 3. Learning Rate Variation (Gradient Boosting)
@@ -54,8 +50,6 @@ Dataset: Adult Census Income (scikit-learn/adult-census-income), binary classifi
 | gb_lr05_5k | 0.05 | 0.854 | 0.642 | 0.888 |
 | gb_lr1_5k | 0.1 | 0.851 | 0.645 | 0.885 |
 
-**Conclusion**: Learning rates 0.05 and 0.1 yield comparable results. ROC-AUC peaks at 0.888 with lr=0.05. Very low learning rate (0.01) underperforms with 200 estimators, showing underfitting.
-
 ---
 
 ## 4. Feature Set Variation
@@ -69,8 +63,6 @@ Dataset: Adult Census Income (scikit-learn/adult-census-income), binary classifi
 | gb_few_features | 4 (numeric only) | 0.826 | 0.561 | 0.844 |
 | gb_lr1_5k | 10 (mixed) | 0.851 | 0.645 | 0.885 |
 | gb_all_features | 13 (all) | 0.863 | 0.684 | 0.918 |
-
-**Conclusion**: Hypothesis confirmed. Adding categorical features significantly improves all metrics. Full feature set (13 features) gives the best ROC-AUC of 0.918.
 
 ---
 
