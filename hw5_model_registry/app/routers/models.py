@@ -1,3 +1,7 @@
+import os
+import shutil
+from typing import Optional
+
 from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
@@ -5,6 +9,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.database import get_db
 from app.models import Model
 from app.schemas import ModelCreate, ModelResponse
+
+STORAGE_DIR = os.getenv("STORAGE_DIR", "./storage")
 
 router = APIRouter(prefix="/api/models", tags=["models"])
 
@@ -22,10 +28,16 @@ async def create_model(data: ModelCreate, db: AsyncSession = Depends(get_db)):
 
 
 @router.get("", response_model=list[ModelResponse])
-async def list_models(team: str | None = None, db: AsyncSession = Depends(get_db)):
+async def list_models(
+    team: Optional[str] = None,
+    name: Optional[str] = None,
+    db: AsyncSession = Depends(get_db),
+):
     q = select(Model)
     if team:
         q = q.where(Model.team == team)
+    if name:
+        q = q.where(Model.name.contains(name))
     result = await db.execute(q.order_by(Model.created_at.desc()))
     return result.scalars().all()
 
@@ -45,5 +57,8 @@ async def delete_model(name: str, db: AsyncSession = Depends(get_db)):
     model = result.scalar_one_or_none()
     if not model:
         raise HTTPException(404, f"Model '{name}' not found")
+    model_storage = os.path.join(STORAGE_DIR, name)
     await db.delete(model)
     await db.commit()
+    if os.path.isdir(model_storage):
+        shutil.rmtree(model_storage)

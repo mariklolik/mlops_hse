@@ -49,7 +49,7 @@ models/mlds_180/model_v1_v0_with_rank_dataset_0/
 
 ```
 +------------------+         +-----------------+        +----------------+
-|   CLI / Client   | ------> |   FastAPI App    | -----> |   PostgreSQL   |
+|   CLI / Client   | ------> |   FastAPI App    | -----> |     SQLite     |
 +------------------+  HTTP   |   (REST API)     |        |   (metadata)   |
                              +-----------------+        +----------------+
                                     |
@@ -63,7 +63,7 @@ models/mlds_180/model_v1_v0_with_rank_dataset_0/
 **Components**:
 
 - **FastAPI App** - REST API server. Chosen for async support, auto-generated OpenAPI docs, and Python ecosystem compatibility.
-- **PostgreSQL** - Relational DB for model metadata, versions, tags. Chosen for ACID guarantees and relational queries (model->versions relationship).
+- **SQLite** - Embedded DB for model metadata, versions, tags. Chosen for zero-config deployment and sufficient performance at this scale. Can be swapped with PostgreSQL later.
 - **File Storage** - Local disk for model artifacts. Simple and sufficient for the scale. Can be swapped with S3-compatible storage later.
 
 **Technology choices**:
@@ -71,9 +71,8 @@ models/mlds_180/model_v1_v0_with_rank_dataset_0/
 | Component | Technology | Rationale |
 |-----------|-----------|-----------|
 | API framework | FastAPI | Async, auto-docs, Pydantic validation |
-| Database | PostgreSQL | ACID, relational model fits metadata well |
-| ORM | SQLAlchemy | Mature, async support, migrations |
-| Migrations | Alembic | Standard for SQLAlchemy |
+| Database | SQLite (aiosqlite) | Zero-config, embedded, sufficient for MVP |
+| ORM | SQLAlchemy | Mature, async support |
 | File storage | Local FS | Simple, sufficient for MVP |
 
 ---

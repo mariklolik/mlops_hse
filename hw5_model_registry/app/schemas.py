@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel
 
@@ -39,4 +40,4 @@ class ModelVersionResponse(BaseModel):
 
 
 class StageUpdate(BaseModel):
-    stage: str
+    stage: Literal["none", "staging", "production", "archived"]

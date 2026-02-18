@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 
 from sqlalchemy import Column, Integer, String, Text, DateTime, BigInteger, ForeignKey, JSON, UniqueConstraint, Index
 from sqlalchemy.orm import relationship
@@ -13,8 +13,8 @@ class Model(Base):
     name = Column(String(255), unique=True, nullable=False, index=True)
     description = Column(Text, default="")
     team = Column(String(255), nullable=False, index=True)
-    created_at = Column(DateTime, default=datetime.utcnow)
-    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
+    updated_at = Column(DateTime, default=lambda: datetime.now(timezone.utc), onupdate=lambda: datetime.now(timezone.utc))
 
     versions = relationship("ModelVersion", back_populates="model", cascade="all, delete-orphan")
 
@@ -36,6 +36,6 @@ class ModelVersion(Base):
     metrics = Column(JSON, default=dict)
     params = Column(JSON, default=dict)
     tags = Column(JSON, default=dict)
-    created_at = Column(DateTime, default=datetime.utcnow)
+    created_at = Column(DateTime, default=lambda: datetime.now(timezone.utc))
 
     model = relationship("Model", back_populates="versions")
