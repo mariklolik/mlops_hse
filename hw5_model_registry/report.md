@@ -135,26 +135,26 @@ PATCH /api/models/fraud_detector/versions/1/stage
 
 ```sql
 CREATE TABLE models (
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(255) UNIQUE NOT NULL,
-    description TEXT,
+    description TEXT DEFAULT '',
     team VARCHAR(255) NOT NULL,
-    created_at TIMESTAMP DEFAULT NOW(),
-    updated_at TIMESTAMP DEFAULT NOW()
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
 CREATE TABLE model_versions (
-    id SERIAL PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
     model_id INTEGER REFERENCES models(id) ON DELETE CASCADE,
     version INTEGER NOT NULL,
-    description TEXT,
+    description TEXT DEFAULT '',
     stage VARCHAR(50) DEFAULT 'none',
     file_path VARCHAR(512) NOT NULL,
-    file_size BIGINT,
-    metrics JSONB,
-    params JSONB,
-    tags JSONB,
-    created_at TIMESTAMP DEFAULT NOW(),
+    file_size BIGINT DEFAULT 0,
+    metrics JSON DEFAULT '{}',
+    params JSON DEFAULT '{}',
+    tags JSON DEFAULT '{}',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     UNIQUE(model_id, version)
 );
 
