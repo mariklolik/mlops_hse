@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.db
+storage/
+data/
+model.joblib
+mlruns/
+.ipynb_checkpoints/
+artifacts/
