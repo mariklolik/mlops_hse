@@ -1,0 +1,23 @@
+## DRA driver pods
+NAME                                                READY   STATUS    RESTARTS   AGE
+nvidia-dra-driver-gpu-controller-6b76d69d74-hjk6b   1/1     Running   0          6m9s
+nvidia-dra-driver-gpu-kubelet-plugin-v8vxd          2/2     Running   0          6m9s
+
+## DeviceClass
+NAME                                        AGE
+compute-domain-daemon.nvidia.com            6m9s
+compute-domain-default-channel.nvidia.com   6m9s
+gpu.nvidia.com                              6m9s
+mig.nvidia.com                              6m9s
+vfio.gpu.nvidia.com                         6m9s
+
+## ResourceSlice
+NAME                                                   NODE                   DRIVER                      POOL                   AGE
+epda6tu7ep1dopeif204-compute-domain.nvidia.com-pqh6d   epda6tu7ep1dopeif204   compute-domain.nvidia.com   epda6tu7ep1dopeif204   5m52s
+epda6tu7ep1dopeif204-gpu.nvidia.com-ktd4w              epda6tu7ep1dopeif204   gpu.nvidia.com              epda6tu7ep1dopeif204   5m52s
+
+## ResourceClaim
+
+## ResourceClaimTemplate
+NAMESPACE   NAME              AGE
+gpu-lab     torch-dra-claim   4m57s

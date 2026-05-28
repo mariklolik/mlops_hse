@@ -1,0 +1,37 @@
+## kubeadm
+v1.34.8
+## kubectl
+clientVersion:
+  buildDate: "2026-05-12T09:52:48Z"
+  compiler: gc
+  gitCommit: 1f328c5e9dd683d0c5e69f3d7d58f8371278dec2
+  gitTreeState: clean
+  gitVersion: v1.34.8
+  goVersion: go1.25.9
+  major: "1"
+  minor: "34"
+  platform: linux/amd64
+kustomizeVersion: v5.7.1
+serverVersion:
+  buildDate: "2026-05-12T09:50:02Z"
+  compiler: gc
+  emulationMajor: "1"
+  emulationMinor: "34"
+  gitCommit: 1f328c5e9dd683d0c5e69f3d7d58f8371278dec2
+  gitTreeState: clean
+  gitVersion: v1.34.8
+  goVersion: go1.25.9
+  major: "1"
+  minCompatibilityMajor: "1"
+  minCompatibilityMinor: "33"
+  minor: "34"
+  platform: linux/amd64
+
+## containerd
+containerd containerd.io v1.7.28 b98a3aace656320842a23f4a392a33f46af97866
+## helm
+v3.21.0+ge0878d4
+## helm releases
+NAME        	NAMESPACE   	REVISION	UPDATED                                	STATUS  	CHART                       	APP VERSION
+gpu-operator	gpu-operator	1       	2026-05-28 10:59:33.610721349 +0000 UTC	deployed	gpu-operator-v25.10.1       	v25.10.1   
+monitoring  	monitoring  	1       	2026-05-28 11:01:08.716818855 +0000 UTC	deployed	kube-prometheus-stack-86.0.0	v0.91.0    

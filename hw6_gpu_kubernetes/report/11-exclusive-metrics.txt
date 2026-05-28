@@ -1,0 +1,61 @@
+=== sample DCGM metrics during EXCLUSIVE run ===
+--- sample #1 at 11:30:09 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #2 at 11:30:11 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #3 at 11:30:13 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #4 at 11:30:15 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #5 at 11:30:17 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #6 at 11:30:19 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           32
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #7 at 11:30:21 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            712
+  DCGM_FI_DEV_POWER_USAGE        70.158
+  DCGM_FI_DEV_GPU_TEMP           40
+  DCGM_FI_DEV_MEM_COPY_UTIL      60
+--- sample #8 at 11:30:24 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            712
+  DCGM_FI_DEV_POWER_USAGE        70.158
+  DCGM_FI_DEV_GPU_TEMP           40
+  DCGM_FI_DEV_MEM_COPY_UTIL      60
+--- sample #9 at 11:30:26 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            712
+  DCGM_FI_DEV_POWER_USAGE        70.158
+  DCGM_FI_DEV_GPU_TEMP           40
+  DCGM_FI_DEV_MEM_COPY_UTIL      60
+--- sample #10 at 11:30:28 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            712
+  DCGM_FI_DEV_POWER_USAGE        70.158
+  DCGM_FI_DEV_GPU_TEMP           40
+  DCGM_FI_DEV_MEM_COPY_UTIL      60

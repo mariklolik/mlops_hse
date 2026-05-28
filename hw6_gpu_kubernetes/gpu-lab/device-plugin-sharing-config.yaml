@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: device-plugin-config
+  namespace: gpu-operator
+data:
+  default: |-
+    version: v1
+    flags:
+      migStrategy: none
+  t4-timeslicing-4: |-
+    version: v1
+    flags:
+      migStrategy: none
+    sharing:
+      timeSlicing:
+        renameByDefault: true
+        failRequestsGreaterThanOne: false
+        resources:
+          - name: nvidia.com/gpu
+            replicas: 4
+  t4-mps-4: |-
+    version: v1
+    flags:
+      migStrategy: none
+    sharing:
+      mps:
+        renameByDefault: true
+        failRequestsGreaterThanOne: false
+        resources:
+          - name: nvidia.com/gpu
+            replicas: 4

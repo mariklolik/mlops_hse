@@ -1,0 +1,103 @@
+=== sample DCGM during MPS ===
+--- sample #1 at 11:36:47 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            0
+  DCGM_FI_DEV_POWER_USAGE        14.564
+  DCGM_FI_DEV_GPU_TEMP           33
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #2 at 11:36:52 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #3 at 11:36:57 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #4 at 11:37:03 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #5 at 11:37:08 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #6 at 11:37:13 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #7 at 11:37:18 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.647
+  DCGM_FI_DEV_GPU_TEMP           45
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #8 at 11:37:23 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #9 at 11:37:28 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #10 at 11:37:33 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #11 at 11:37:39 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #12 at 11:37:44 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #13 at 11:37:49 ---
+  DCGM_FI_DEV_GPU_UTIL           100
+  DCGM_FI_DEV_FB_USED            2630
+  DCGM_FI_DEV_POWER_USAGE        69.46
+  DCGM_FI_DEV_GPU_TEMP           52
+  DCGM_FI_DEV_MEM_COPY_UTIL      52
+--- sample #14 at 11:37:54 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        16.268
+  DCGM_FI_DEV_GPU_TEMP           51
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #15 at 11:37:59 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        16.268
+  DCGM_FI_DEV_GPU_TEMP           51
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #16 at 11:38:04 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        16.268
+  DCGM_FI_DEV_GPU_TEMP           51
+  DCGM_FI_DEV_MEM_COPY_UTIL      0
+--- sample #17 at 11:38:09 ---
+  DCGM_FI_DEV_GPU_UTIL           0
+  DCGM_FI_DEV_FB_USED            30
+  DCGM_FI_DEV_POWER_USAGE        16.268
+  DCGM_FI_DEV_GPU_TEMP           51
+  DCGM_FI_DEV_MEM_COPY_UTIL      0

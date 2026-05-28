@@ -1,0 +1,38 @@
+NAMESPACE               NAME                                                          READY   STATUS      RESTARTS      AGE
+gpu-lab                 torch-benchmark-dra-kf27s                                     0/1     Completed   0             60s
+gpu-lab                 torch-benchmark-hv8fc                                         0/1     Completed   0             16m
+gpu-lab                 torch-benchmark-mps-1-j4q5k                                   0/1     Completed   0             10m
+gpu-lab                 torch-benchmark-mps-2-58hdm                                   0/1     Completed   0             10m
+gpu-lab                 torch-benchmark-mps-3-t87p6                                   0/1     Completed   0             10m
+gpu-lab                 torch-benchmark-mps-4-mb69v                                   0/1     Completed   0             10m
+gpu-lab                 torch-benchmark-ts-1-pscng                                    0/1     Completed   0             14m
+gpu-lab                 torch-benchmark-ts-2-4p4bp                                    0/1     Completed   0             14m
+gpu-lab                 torch-benchmark-ts-3-8pxgs                                    0/1     Completed   0             14m
+gpu-lab                 torch-benchmark-ts-4-wcpfj                                    0/1     Completed   0             14m
+gpu-operator            gpu-feature-discovery-dmtqh                                   2/2     Running     0             45m
+gpu-operator            gpu-operator-7569f8b499-78jxj                                 1/1     Running     2 (36m ago)   46m
+gpu-operator            gpu-operator-node-feature-discovery-gc-55ffc49ccc-6rg6p       1/1     Running     0             46m
+gpu-operator            gpu-operator-node-feature-discovery-master-6b5787f695-xwkxf   1/1     Running     2 (36m ago)   46m
+gpu-operator            gpu-operator-node-feature-discovery-worker-jq5v9              1/1     Running     0             46m
+gpu-operator            nvidia-container-toolkit-daemonset-bv22n                      1/1     Running     0             45m
+gpu-operator            nvidia-cuda-validator-wqnh9                                   0/1     Completed   0             41m
+gpu-operator            nvidia-dcgm-exporter-qmmnh                                    1/1     Running     0             45m
+gpu-operator            nvidia-device-plugin-daemonset-4sdjs                          2/2     Running     0             4m20s
+gpu-operator            nvidia-driver-daemonset-7xklm                                 1/1     Running     0             46m
+gpu-operator            nvidia-operator-validator-97dgp                               1/1     Running     0             45m
+kube-flannel            kube-flannel-ds-22dqq                                         1/1     Running     0             47m
+kube-system             coredns-66bc5c9577-fprnv                                      1/1     Running     0             47m
+kube-system             coredns-66bc5c9577-wk8ws                                      1/1     Running     0             47m
+kube-system             etcd-epda6tu7ep1dopeif204                                     1/1     Running     0             47m
+kube-system             kube-apiserver-epda6tu7ep1dopeif204                           1/1     Running     0             47m
+kube-system             kube-controller-manager-epda6tu7ep1dopeif204                  1/1     Running     2 (36m ago)   47m
+kube-system             kube-proxy-pznkn                                              1/1     Running     0             47m
+kube-system             kube-scheduler-epda6tu7ep1dopeif204                           1/1     Running     2 (36m ago)   47m
+monitoring              alertmanager-monitoring-kube-prometheus-alertmanager-0        2/2     Running     0             43m
+monitoring              monitoring-grafana-7745f798c-fczks                            3/3     Running     0             43m
+monitoring              monitoring-kube-prometheus-operator-64d4b5575c-6qtjg          1/1     Running     0             43m
+monitoring              monitoring-kube-state-metrics-7f7f8474d9-ctw29                1/1     Running     2 (34m ago)   43m
+monitoring              monitoring-prometheus-node-exporter-qsn7b                     1/1     Running     0             43m
+monitoring              prometheus-monitoring-kube-prometheus-prometheus-0            2/2     Running     0             43m
+nvidia-dra-driver-gpu   nvidia-dra-driver-gpu-controller-6b76d69d74-hjk6b             1/1     Running     0             6m9s
+nvidia-dra-driver-gpu   nvidia-dra-driver-gpu-kubelet-plugin-v8vxd                    2/2     Running     0             6m9s

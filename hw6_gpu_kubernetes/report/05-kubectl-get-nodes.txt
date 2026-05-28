@@ -1,0 +1,2 @@
+NAME                   STATUS   ROLES           AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION       CONTAINER-RUNTIME
+epda6tu7ep1dopeif204   Ready    control-plane   47m   v1.34.8   10.129.0.42   <none>        Ubuntu 22.04.5 LTS   5.15.0-157-generic   containerd://1.7.28

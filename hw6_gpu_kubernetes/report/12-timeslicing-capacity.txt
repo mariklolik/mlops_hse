@@ -1,0 +1,19 @@
+Capacity:
+  cpu:                    8
+  ephemeral-storage:      100941264Ki
+  hugepages-1Gi:          0
+  hugepages-2Mi:          0
+  memory:                 32861524Ki
+  nvidia.com/gpu:         1
+  nvidia.com/gpu.shared:  4
+  pods:                   110
+Allocatable:
+  cpu:                    8
+  ephemeral-storage:      93027468749
+  hugepages-1Gi:          0
+  hugepages-2Mi:          0
+  memory:                 32759124Ki
+  nvidia.com/gpu:         0
+  nvidia.com/gpu.shared:  4
+  pods:                   110
+System Info:

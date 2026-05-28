@@ -1,0 +1,72 @@
+===== torch-benchmark-mps-1 =====
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5 dtype=float32
+step=10/120 last_step_sec=0.5962
+step=20/120 last_step_sec=0.6002
+step=30/120 last_step_sec=0.6099
+step=40/120 last_step_sec=0.6163
+step=50/120 last_step_sec=0.6220
+step=60/120 last_step_sec=0.6156
+step=70/120 last_step_sec=0.6194
+step=80/120 last_step_sec=0.6394
+step=90/120 last_step_sec=0.6426
+step=100/120 last_step_sec=0.6290
+step=110/120 last_step_sec=0.6473
+step=120/120 last_step_sec=0.6385
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "matrix_size": 6144, "steps": 120, "dtype": "float32", "total_wall_sec": 74.3614, "avg_step_sec": 0.619672, "min_step_sec": 0.584087, "max_step_sec": 0.650054, "stdev_step_sec": 0.014766, "peak_cuda_mem_gb": 0.5704}
+
+===== torch-benchmark-mps-2 =====
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5 dtype=float32
+step=10/120 last_step_sec=0.5961
+step=20/120 last_step_sec=0.6001
+step=30/120 last_step_sec=0.6097
+step=40/120 last_step_sec=0.6164
+step=50/120 last_step_sec=0.6219
+step=60/120 last_step_sec=0.6158
+step=70/120 last_step_sec=0.6193
+step=80/120 last_step_sec=0.6393
+step=90/120 last_step_sec=0.6428
+step=100/120 last_step_sec=0.6289
+step=110/120 last_step_sec=0.6471
+step=120/120 last_step_sec=0.6385
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "matrix_size": 6144, "steps": 120, "dtype": "float32", "total_wall_sec": 74.3575, "avg_step_sec": 0.61964, "min_step_sec": 0.584013, "max_step_sec": 0.649766, "stdev_step_sec": 0.014799, "peak_cuda_mem_gb": 0.5704}
+
+===== torch-benchmark-mps-3 =====
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5 dtype=float32
+step=10/120 last_step_sec=0.5959
+step=20/120 last_step_sec=0.6000
+step=30/120 last_step_sec=0.6091
+step=40/120 last_step_sec=0.6158
+step=50/120 last_step_sec=0.6218
+step=60/120 last_step_sec=0.6153
+step=70/120 last_step_sec=0.6191
+step=80/120 last_step_sec=0.6393
+step=90/120 last_step_sec=0.6424
+step=100/120 last_step_sec=0.6291
+step=110/120 last_step_sec=0.6470
+step=120/120 last_step_sec=0.6387
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "matrix_size": 6144, "steps": 120, "dtype": "float32", "total_wall_sec": 74.3406, "avg_step_sec": 0.6195, "min_step_sec": 0.583997, "max_step_sec": 0.650031, "stdev_step_sec": 0.014877, "peak_cuda_mem_gb": 0.5704}
+
+===== torch-benchmark-mps-4 =====
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5 dtype=float32
+step=10/120 last_step_sec=0.5960
+step=20/120 last_step_sec=0.6001
+step=30/120 last_step_sec=0.6093
+step=40/120 last_step_sec=0.6160
+step=50/120 last_step_sec=0.6218
+step=60/120 last_step_sec=0.6154
+step=70/120 last_step_sec=0.6192
+step=80/120 last_step_sec=0.6390
+step=90/120 last_step_sec=0.6425
+step=100/120 last_step_sec=0.6292
+step=110/120 last_step_sec=0.6472
+step=120/120 last_step_sec=0.6383
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "matrix_size": 6144, "steps": 120, "dtype": "float32", "total_wall_sec": 74.3461, "avg_step_sec": 0.619545, "min_step_sec": 0.583968, "max_step_sec": 0.649837, "stdev_step_sec": 0.014815, "peak_cuda_mem_gb": 0.5704}
+

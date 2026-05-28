@@ -1,0 +1,43 @@
+=== Slurm job 3 on epda6tu7ep1dopeif204 ===
+GPU GRES: 0 / CUDA_VISIBLE_DEVICES=0
+Start: Thu May 28 21:03:00 UTC 2026
+
+--- nvidia-smi (host) ---
+Thu May 28 21:03:00 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 580.105.08             Driver Version: 580.105.08     CUDA Version: 13.0     |
++-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  Tesla T4                       Off |   00000000:8B:00.0 Off |                    0 |
+| N/A   30C    P8             14W /   70W |       0MiB /  15360MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+
+--- PyTorch matmul via containerd ---
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5
+step=10/120 last=0.1182
+step=20/120 last=0.1205
+step=30/120 last=0.1204
+step=40/120 last=0.1208
+step=50/120 last=0.1209
+step=60/120 last=0.1189
+step=70/120 last=0.1198
+step=80/120 last=0.1208
+step=90/120 last=0.1197
+step=100/120 last=0.1198
+step=110/120 last=0.1189
+step=120/120 last=0.1208
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "total_wall_sec": 14.3674, "avg_step_sec": 0.119722, "min_step_sec": 0.117327, "max_step_sec": 0.124837, "peak_cuda_mem_gb": 0.5704}

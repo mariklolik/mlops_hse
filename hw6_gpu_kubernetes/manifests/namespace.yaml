@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: gpu-lab
+  labels:
+    name: gpu-lab
+    purpose: gpu-workloads

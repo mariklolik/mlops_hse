@@ -1,0 +1,46 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: torch-benchmark
+  namespace: gpu-lab
+  labels:
+    app: torch-benchmark
+    gpu-mode: exclusive
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 3600
+  template:
+    metadata:
+      labels:
+        app: torch-benchmark
+        gpu-mode: exclusive
+    spec:
+      restartPolicy: Never
+      containers:
+        - name: torch-benchmark
+          image: pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime
+          imagePullPolicy: IfNotPresent
+          command:
+            - python
+            - /scripts/benchmark.py
+          env:
+            - name: MATRIX_SIZE
+              value: "6144"
+            - name: STEPS
+              value: "120"
+            - name: WARMUP
+              value: "5"
+            - name: DTYPE
+              value: "float32"
+          resources:
+            limits:
+              nvidia.com/gpu: 1
+          volumeMounts:
+            - name: script
+              mountPath: /scripts
+              readOnly: true
+      volumes:
+        - name: script
+          configMap:
+            name: torch-benchmark-script
+            defaultMode: 0555

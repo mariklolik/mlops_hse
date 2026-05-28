@@ -1,0 +1,3 @@
+job.batch/torch-benchmark-dra created
+error: resource mapping not found for name: "torch-dra-claim" namespace: "gpu-lab" from "/home/khra-oksana/k8s-gpu-lab/scripts/dra-pod.yaml": no matches for kind "ResourceClaimTemplate" in version "resource.k8s.io/v1alpha3"
+ensure CRDs are installed first

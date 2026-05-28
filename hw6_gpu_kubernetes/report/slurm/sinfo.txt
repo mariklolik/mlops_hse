@@ -1,0 +1,43 @@
+## sinfo
+PARTITION AVAIL  TIMELIMIT  NODES  STATE NODELIST
+gpu*         up    1:00:00      1   idle epda6tu7ep1dopeif204
+
+## scontrol show partition gpu
+PartitionName=gpu
+   AllowGroups=ALL AllowAccounts=ALL AllowQos=ALL
+   AllocNodes=ALL Default=YES QoS=N/A
+   DefaultTime=NONE DisableRootJobs=NO ExclusiveUser=NO GraceTime=0 Hidden=NO
+   MaxNodes=UNLIMITED MaxTime=01:00:00 MinNodes=0 LLN=NO MaxCPUsPerNode=UNLIMITED
+   Nodes=epda6tu7ep1dopeif204
+   PriorityJobFactor=1 PriorityTier=1 RootOnly=NO ReqResv=NO OverSubscribe=NO
+   OverTimeLimit=NONE PreemptMode=OFF
+   State=UP TotalCPUs=8 TotalNodes=1 SelectTypeParameters=NONE
+   JobDefaults=(null)
+   DefMemPerNode=UNLIMITED MaxMemPerNode=UNLIMITED
+
+
+## scontrol show node
+NodeName=epda6tu7ep1dopeif204 Arch=x86_64 CoresPerSocket=1 
+   CPUAlloc=0 CPUTot=8 CPULoad=0.46
+   AvailableFeatures=(null)
+   ActiveFeatures=(null)
+   Gres=gpu:tesla_t4:1
+   NodeAddr=epda6tu7ep1dopeif204 NodeHostName=epda6tu7ep1dopeif204 Version=21.08.5
+   OS=Linux 5.15.0-157-generic #167-Ubuntu SMP Wed Sep 17 21:35:53 UTC 2025 
+   RealMemory=30091 AllocMem=0 FreeMem=3620 Sockets=8 Boards=1
+   State=IDLE ThreadsPerCore=1 TmpDisk=0 Weight=1 Owner=N/A MCS_label=N/A
+   Partitions=gpu 
+   BootTime=2026-05-11T19:21:59 SlurmdStartTime=2026-05-28T20:59:00
+   LastBusyTime=2026-05-28T21:03:17
+   CfgTRES=cpu=8,mem=30091M,billing=8
+   AllocTRES=
+   CapWatts=n/a
+   CurrentWatts=0 AveWatts=0
+   ExtSensorsJoules=n/s ExtSensorsWatts=0 ExtSensorsTemp=n/s
+
+
+## squeue
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+
+## sacct (recent jobs)
+Slurm accounting storage is disabled

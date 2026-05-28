@@ -1,0 +1,16 @@
+gpu_name=Tesla T4
+total_memory_gb=14.56
+matrix_size=6144 steps=120 warmup=5 dtype=float32
+step=10/120 last_step_sec=0.1200
+step=20/120 last_step_sec=0.1206
+step=30/120 last_step_sec=0.1215
+step=40/120 last_step_sec=0.1201
+step=50/120 last_step_sec=0.1185
+step=60/120 last_step_sec=0.1188
+step=70/120 last_step_sec=0.1204
+step=80/120 last_step_sec=0.1204
+step=90/120 last_step_sec=0.1185
+step=100/120 last_step_sec=0.1197
+step=110/120 last_step_sec=0.1201
+step=120/120 last_step_sec=0.1204
+RESULT_JSON={"gpu_name": "Tesla T4", "total_memory_gb": 14.563, "matrix_size": 6144, "steps": 120, "dtype": "float32", "total_wall_sec": 14.3789, "avg_step_sec": 0.119819, "min_step_sec": 0.11752, "max_step_sec": 0.123847, "stdev_step_sec": 0.001135, "peak_cuda_mem_gb": 0.5704}

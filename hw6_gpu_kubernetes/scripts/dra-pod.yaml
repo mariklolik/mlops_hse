@@ -1,0 +1,67 @@
+# Bonus: Dynamic Resource Allocation (DRA) demo Job.
+# Requires NVIDIA DRA Driver for GPUs (helm chart nvidia-dra-driver-gpu).
+# Uses ResourceClaimTemplate + resourceClaims to request a GPU instead of the
+# legacy device plugin path.
+---
+apiVersion: resource.k8s.io/v1
+kind: ResourceClaimTemplate
+metadata:
+  name: torch-dra-claim
+  namespace: gpu-lab
+spec:
+  spec:
+    devices:
+      requests:
+        - name: gpu
+          exactly:
+            deviceClassName: gpu.nvidia.com
+            allocationMode: ExactCount
+            count: 1
+---
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: torch-benchmark-dra
+  namespace: gpu-lab
+  labels:
+    app: torch-benchmark
+    gpu-mode: dra
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 3600
+  template:
+    metadata:
+      labels:
+        app: torch-benchmark
+        gpu-mode: dra
+    spec:
+      restartPolicy: Never
+      resourceClaims:
+        - name: gpu
+          resourceClaimTemplateName: torch-dra-claim
+      containers:
+        - name: torch-benchmark
+          image: pytorch/pytorch:2.3.0-cuda12.1-cudnn8-runtime
+          imagePullPolicy: IfNotPresent
+          command:
+            - python
+            - /scripts/benchmark.py
+          env:
+            - name: MATRIX_SIZE
+              value: "6144"
+            - name: STEPS
+              value: "120"
+            - name: WARMUP
+              value: "5"
+          resources:
+            claims:
+              - name: gpu
+          volumeMounts:
+            - name: script
+              mountPath: /scripts
+              readOnly: true
+      volumes:
+        - name: script
+          configMap:
+            name: torch-benchmark-script
+            defaultMode: 0555

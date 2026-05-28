@@ -1,0 +1,3 @@
+NAME                   AGE
+gpu-operator           6m55s
+nvidia-dcgm-exporter   0s
