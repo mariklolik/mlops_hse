@@ -26,12 +26,7 @@ hw6_gpu_kubernetes/
 
 ## Как пользоваться
 
-1. **Ждать SSH.** Запустить `scripts/ssh-wait.sh`. Когда вернётся `READY`, можно копировать на VM.
-2. **Скопировать каталог на VM.**
-   ```bash
-   scp -r hw6_gpu_kubernetes khra-oksana@111.88.152.253:/home/khra-oksana/k8s-gpu-lab
-   ```
-3. **Зайти на VM и запускать шаги по очереди.**
+1. **Зайти на VM и запускать шаги по очереди.**
    ```bash
    ssh khra-oksana@111.88.152.253
    cd /home/khra-oksana/k8s-gpu-lab
@@ -53,7 +48,7 @@ hw6_gpu_kubernetes/
    ./scripts/run-lab.sh mps           # экспериментально
    ./scripts/run-lab.sh final
    ```
-4. **Port-forward для UI.**
+2. **Port-forward для UI.**
    ```bash
    # на VM:
    kubectl port-forward -n monitoring svc/monitoring-grafana 3000:80
@@ -63,8 +58,6 @@ hw6_gpu_kubernetes/
    ```
    Grafana: `http://localhost:3000` (admin / см. `report/10-grafana-password.txt`).
    JupyterLab: `http://localhost:8888/lab?token=gpu-lab-token`.
-5. **Скриншоты Grafana** (dashboard 12239 или Explore с DCGM_FI_*) приложить к отчёту.
-6. **Заполнить `docs/REPORT.md`** значениями из `report/*.txt`.
 
 ## Что собирается в `report/` на VM
 
